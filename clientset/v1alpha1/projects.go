@@ -1,7 +1,8 @@
 package v1alpha1
 
 import (
-	"github.com/ColdFreak/kubernetes-crd/api/types/v1alpha1"
+	// "github.com/ColdFreak/kubernetes-crd/api/types/v1alpha1"
+	"../../api/types/v1alpha1"
 	meta_v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/kubernetes/scheme"

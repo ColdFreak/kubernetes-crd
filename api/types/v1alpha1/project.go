@@ -1,3 +1,8 @@
+// Each type that is being served by the Kubernetes API (in this case, Project and ProjectList)
+// needs to implement the k8s.io/apimachinery/pkg/runtime.Object interface.
+// This interface defines the two methods GetObjectKind() and DeepCopyObject().
+// The first method is already provided by the embedded metav1.TypeMeta struct; the second you’ll have to implement yourself.
+
 package v1alpha1
 
 import (
