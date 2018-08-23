@@ -1,0 +1,8 @@
+# projects-crd.yamlにCRDを定義したから、ここでobjectを定義する
+apiVersion: "kubernetes.idcf.jp/v1alpha1"
+kind: "Project"
+metadata:
+  name: "example-project"
+  namespace: "default"
+spec:
+  replicas: 1

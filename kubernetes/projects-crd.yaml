@@ -1,0 +1,22 @@
+apiVersion: "apiextensions.k8s.io/v1beta1"
+kind: "CustomResourceDefinition"
+metadata:
+  name: "projects.kubernetes.idcf.jp" # <plural-resource-name>.<api-group-name>
+spec:
+  group: "kubernetes.idcf.jp" # this is usually the Domain Name of a domain that you control (for example, your organization’s domain) 
+  version: "v1alpha1"
+  scope: "Namespaced"
+  names:
+    plural: "projects"
+    singular: "project"
+    kind: "Project"
+  validation:
+    openAPIV3Schema:
+      required: ["spec"]
+      properties:
+        spec:
+          required: ["replicas"]
+          properties:
+            replicas:
+              type: "integer"
+              minimum: 1
